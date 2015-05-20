@@ -168,15 +168,15 @@ static dispatch_queue_t m_queue;
     __block NSDictionary* _params = params;
     __block NSString* _requestHash = requestHash;
     
+    if (!m_queue)
+    {
+        m_queue = dispatch_queue_create([[self queueIdentifier] UTF8String], DISPATCH_QUEUE_PRIORITY_DEFAULT);
+    }
+    
     AFHTTPRequestOperation* _requestOperation = nil;
     _requestOperation = [manager HTTPRequestOperationWithRequest:request
                                                          success:^(AFHTTPRequestOperation *operation, id responseObject)
                          {
-                             if (!m_queue)
-                             {
-                                 m_queue = dispatch_queue_create([[self queueIdentifier] UTF8String], DISPATCH_QUEUE_PRIORITY_DEFAULT);
-                             }
-                             
                              dispatch_async(m_queue, ^{
                                  if ([self logging])
                                  {
