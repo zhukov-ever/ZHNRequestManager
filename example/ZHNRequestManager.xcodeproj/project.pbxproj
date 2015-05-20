@@ -10,7 +10,6 @@
 		14DC81681AFCA1CF00DC96DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DC81671AFCA1CF00DC96DA /* main.m */; };
 		14DC816B1AFCA1CF00DC96DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DC816A1AFCA1CF00DC96DA /* AppDelegate.m */; };
 		14DC81731AFCA1CF00DC96DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DC81721AFCA1CF00DC96DA /* Images.xcassets */; };
-		14DC81DF1AFCAA9E00DC96DA /* ZHNBaseSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14DC81DE1AFCAA9E00DC96DA /* ZHNBaseSingleton.m */; };
 		14F225B21B04BA0900D9FCE2 /* ZHNFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F225AF1B04BA0900D9FCE2 /* ZHNFile.m */; };
 		14F225B31B04BA0900D9FCE2 /* ZHNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F225B11B04BA0900D9FCE2 /* ZHNRequestManager.m */; };
 		14F225BD1B04BACB00D9FCE2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F225BC1B04BACB00D9FCE2 /* Default-568h@2x.png */; };
@@ -27,8 +26,6 @@
 		14DC81691AFCA1CF00DC96DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14DC816A1AFCA1CF00DC96DA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14DC81721AFCA1CF00DC96DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14DC81DD1AFCAA9E00DC96DA /* ZHNBaseSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHNBaseSingleton.h; path = ../../ZHNBaseSingleton/ZHNBaseSingleton.h; sourceTree = "<group>"; };
-		14DC81DE1AFCAA9E00DC96DA /* ZHNBaseSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHNBaseSingleton.m; path = ../../ZHNBaseSingleton/ZHNBaseSingleton.m; sourceTree = "<group>"; };
 		14F225AE1B04BA0900D9FCE2 /* ZHNFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHNFile.h; path = ../../ZHNRequestManager/ZHNFile.h; sourceTree = "<group>"; };
 		14F225AF1B04BA0900D9FCE2 /* ZHNFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZHNFile.m; path = ../../ZHNRequestManager/ZHNFile.m; sourceTree = "<group>"; };
 		14F225B01B04BA0900D9FCE2 /* ZHNRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZHNRequestManager.h; path = ../../ZHNRequestManager/ZHNRequestManager.h; sourceTree = "<group>"; };
@@ -132,7 +129,6 @@
 		14DC818E1AFCA22A00DC96DA /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				14DC81DA1AFCAA8500DC96DA /* ZHNBaseSingleton */,
 				14DC81D61AFCA8C900DC96DA /* ZHNRequestManager */,
 			);
 			name = Libs;
@@ -147,15 +143,6 @@
 				14F225B11B04BA0900D9FCE2 /* ZHNRequestManager.m */,
 			);
 			name = ZHNRequestManager;
-			sourceTree = "<group>";
-		};
-		14DC81DA1AFCAA8500DC96DA /* ZHNBaseSingleton */ = {
-			isa = PBXGroup;
-			children = (
-				14DC81DD1AFCAA9E00DC96DA /* ZHNBaseSingleton.h */,
-				14DC81DE1AFCAA9E00DC96DA /* ZHNBaseSingleton.m */,
-			);
-			name = ZHNBaseSingleton;
 			sourceTree = "<group>";
 		};
 		7C1EEAE63B7639119A9BD4DC /* Frameworks */ = {
@@ -285,7 +272,6 @@
 				14DC816B1AFCA1CF00DC96DA /* AppDelegate.m in Sources */,
 				14F225C21B04BCA600D9FCE2 /* MainVC.m in Sources */,
 				14DC81681AFCA1CF00DC96DA /* main.m in Sources */,
-				14DC81DF1AFCAA9E00DC96DA /* ZHNBaseSingleton.m in Sources */,
 				14F225C51B04C1DA00D9FCE2 /* MainRM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
