@@ -11,9 +11,8 @@
 #import "AFHTTPRequestOperationManager.h"
 
 
-
-
 static NSMutableSet* m_requestsPool;
+static dispatch_queue_t m_queue;
 
 @interface ZHNRequestManager()
 
@@ -44,6 +43,11 @@ static NSMutableSet* m_requestsPool;
 
 
 #pragma mark - protected
+
+- (NSString*) queueIdentifier
+{
+    return [NSBundle mainBundle].bundleIdentifier;
+}
 
 - (BOOL) logging
 {
@@ -168,7 +172,12 @@ static NSMutableSet* m_requestsPool;
     _requestOperation = [manager HTTPRequestOperationWithRequest:request
                                                          success:^(AFHTTPRequestOperation *operation, id responseObject)
                          {
-                             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                             if (!m_queue)
+                             {
+                                 m_queue = dispatch_queue_create([[self queueIdentifier] UTF8String], DISPATCH_QUEUE_PRIORITY_DEFAULT);
+                             }
+                             
+                             dispatch_async(m_queue, ^{
                                  if ([self logging])
                                  {
                                      NSLog(@"request success:\n%@", _requestHash);

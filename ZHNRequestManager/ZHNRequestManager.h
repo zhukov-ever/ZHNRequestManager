@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
-
 typedef NS_ENUM(NSInteger, RequestTypes)
 {
     RequestTypeGET = 0,
@@ -18,8 +16,6 @@ typedef NS_ENUM(NSInteger, RequestTypes)
     RequestTypePUT = 2,
     RequestTypeDELETE = 3
 };
-
-
 
 
 @interface ZHNRequestManager : NSObject
@@ -37,6 +33,8 @@ typedef NS_ENUM(NSInteger, RequestTypes)
 
 
 #pragma mark - override this methods:
+
+- (NSString*) queueIdentifier;
 
 - (BOOL) logging;
 
